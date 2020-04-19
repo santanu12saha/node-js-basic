@@ -1,0 +1,19 @@
+{
+  "name": "note-app",
+  "version": "1.0.0",
+  "description": "Note app for saving,deleteing and updating notes.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/santanu12saha/node-js-basic/blob/master/note-app"
+  },
+  "author": "Santanu Saha",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "yargs": "^4.7.1"
+  }
+}
