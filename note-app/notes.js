@@ -1,7 +1,36 @@
 console.log('Starting notes.js');
 
+const fs = require('fs');
+const saveNoteFileName = 'notes-data.json';
+
+var fetchNotes = () => {
+    
+    // this try catch block help to support both file not found and Json parse exception
+    try{
+        var notesString = fs.readFileSync(saveNoteFileName);
+        return JSON.parse(notesString);
+    }catch(error){
+        return [];
+    }
+};
+
+var saveNotes = (notes) => {
+    fs.writeFileSync(saveNoteFileName, JSON.stringify(notes));
+};
+
 var addNote = (title, body) => {
-    console.log('Adding note', title, body);
+    var notes = fetchNotes();
+    var note = {
+        title,
+        body
+    };
+
+    var duplicateNotes = notes.filter((note) => note.title === title);
+    if(duplicateNotes.length === 0){
+        notes.push(note);
+        saveNotes(notes);
+        return note;
+    }
 };
 
 var getAll = () => {
@@ -13,7 +42,14 @@ var getNote = (title) => {
 }
 
 var removeNote = (title) => {
-    console.log('Removing note', title);
+    //fetch Notes.
+    var notes = fetchNotes();
+    //filter notes, removing the one with the title of argument.
+    var filteredNotes = notes.filter((note) => note.title !== title);
+    //save new notes array 
+    saveNotes(filteredNotes);
+
+    return notes.length !== filteredNotes.length;
 }
 
 module.exports = {
