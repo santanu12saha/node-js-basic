@@ -1,0 +1,23 @@
+{
+  "name": "axios-weather-app",
+  "version": "1.0.0",
+  "description": "A simple weather app with axios.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/santanu12saha/node-js-basic/tree/axios-weather-app/axios-weather-app"
+  },
+  "keywords": [
+    "axios",
+    "weatherapp"
+  ],
+  "author": "Santanu Saha",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "yargs": "^15.3.1"
+  }
+}
