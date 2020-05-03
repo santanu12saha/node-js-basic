@@ -15,5 +15,9 @@
     "weatherapp"
   ],
   "author": "Santanu Saha",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.2",
+    "yargs": "^15.3.1"
+  }
 }
