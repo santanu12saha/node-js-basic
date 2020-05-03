@@ -1,0 +1,19 @@
+{
+  "name": "promise-weather-app",
+  "version": "1.0.0",
+  "description": "A simple weather app with promise.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/santanu12saha/node-js-basic/tree/weather-app/promise-weather-app"
+  },
+  "keywords": [
+    "promise",
+    "weatherapp"
+  ],
+  "author": "Santanu Saha",
+  "license": "ISC"
+}
