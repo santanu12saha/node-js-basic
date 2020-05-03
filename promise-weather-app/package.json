@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/santanu12saha/node-js-basic/tree/weather-app/promise-weather-app"
+    "url": "https://github.com/santanu12saha/node-js-basic/tree/promise-weather-app/promise-weather-app"
   },
   "keywords": [
     "promise",
