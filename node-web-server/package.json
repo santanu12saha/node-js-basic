@@ -1,0 +1,19 @@
+{
+  "name": "web-server",
+  "version": "1.0.0",
+  "description": "A simple web server application with express.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/santanu12saha/node-js-basic/tree/node-web-server/node-web-server"
+  },
+  "keywords": [
+    "webserver",
+    "express"
+  ],
+  "author": "Santanu Saha",
+  "license": "ISC"
+}
