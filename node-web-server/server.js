@@ -1,9 +1,9 @@
 const express = require('express');
 const hbs = require('hbs');
 
-
 var app = express();
 
+hbs.registerPartials(__dirname + '/views/partials');
 app.set('view engine', hbs);
 app.use(express.static(__dirname + '/public'));
 
@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 
 app.get('/home', (req, res) => {
     res.render('home.hbs', {
-        homeTitle: 'Home Page',
+        pageTitle: 'Home Page',
         welcomeMessage: 'Welcome to template engine handlebars, Santanu Saha',
         currentYear: new Date().getFullYear()
     });
