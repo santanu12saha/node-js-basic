@@ -1,0 +1,23 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "description": "A simple testing application for node js",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha **/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/santanu12saha/node-js-basic/tree/node-tests/node-tests"
+  },
+  "keywords": [
+    "test",
+    "node",
+    "app"
+  ],
+  "author": "Santanu Saha",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^7.1.2"
+  }
+}
