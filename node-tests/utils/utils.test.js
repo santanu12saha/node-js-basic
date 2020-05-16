@@ -29,8 +29,7 @@ describe('Utils', () => {
         
         it('should async square a number', (done) => {
             utils.asyncSquare(5, (square) => {
-                expect(square).toBe(25);
-                expect(typeof square).toBe('number');
+                expect(square).toBe(25).toBeA('number');
                 done();
             });
         });
@@ -43,8 +42,7 @@ describe('Utils', () => {
             var res = utils.setName(user, 'Santanu Saha');
             
             expect(res).toEqual(user);
-            expect(res).toMatchObject({firstName: 'Santanu', lastName: 'Saha'});
-            expect(res).toHaveProperty('firstName', 'Santanu');
+            expect(res).toInclude({firstName: 'Santanu', lastName: 'Saha'});
         });
     });
 
@@ -68,14 +66,14 @@ describe("General", () => {
         expect({
             name: 'Santanu',
             age: 29
-        }).toHaveProperty('age');
+        }).toIncludeKey('age').toIncludeKey('name', 'age');
     });
     
     it('should check property and value from object', () => {
         expect({
             name: 'Santanu',
             age: 29
-        }).toMatchObject({'age': 29});
+        }).toInclude({'age': 29});
     });
 });
 

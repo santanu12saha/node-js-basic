@@ -20,9 +20,9 @@ describe('Server', () => {
              .get('/status')
              .expect(404)
              .expect((res) => {
-                expect(res.body).toMatchObject({
+                expect(res.body).toInclude({
                     error: 'Page not found.'
-                })
+                });
              })
              .end(done);
         });
@@ -34,10 +34,10 @@ describe('Server', () => {
              .get('/users')
              .expect(200)
              .expect((res) => {
-                 expect(res.body).toEqual(expect.arrayContaining([{
+                 expect(res.body).toInclude({
                      name: 'Santanu Saha',
                      age: 30
-                 }]));
+                 });
              })
              .end(done);
         });
